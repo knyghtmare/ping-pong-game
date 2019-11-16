@@ -82,7 +82,6 @@ window.onkeypress(paddle_b_up, 'Up')
 window.onkeypress(paddle_b_down, 'Down')
 window.onkeypress(quit_game, 'q')
 window.listen()
-# window.mainloop()
 
 
 # pen
@@ -107,7 +106,7 @@ while True:
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy = ball.dy * (-1)
-        os.system('afplay bounce.wave&')
+        os.system('afplay bounce.wav&')
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx = ball.dx * (-1)
@@ -117,7 +116,7 @@ while True:
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy = ball.dy * (-1)
-        os.system('afplay bounce.wave&')
+        os.system('afplay bounce.wav&')
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx = ball.dx * (-1)
@@ -129,9 +128,11 @@ while True:
     if (340 < ball.xcor() < 350) and (paddle_b.ycor() + 50 > ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
         ball.dx = ball.dx * (-1)
-        os.system('afplay bounce.wave&')
+        os.system('afplay bounce.wav&')
 
     if (-350 < ball.xcor() < -340) and (paddle_a.ycor() + 50 > ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
         ball.dx = ball.dx * (-1)
-        os.system('afplay bounce.wave&')
+        os.system('afplay bounce.wav&')
+
+window.mainloop()
