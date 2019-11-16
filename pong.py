@@ -76,11 +76,11 @@ def quit_game():
     window.bye()
 
 
-window.onkeypress(paddle_a_up(), 'w')
-window.onkeypress(paddle_a_down(), 's')
-window.onkeypress(paddle_b_up(), 'Up')
-window.onkeypress(paddle_b_down(), 'Down')
-window.onkeypress(quit_game(), 'q')
+window.onkeypress(paddle_a_up, 'w')
+window.onkeypress(paddle_a_down, 's')
+window.onkeypress(paddle_b_up, 'Up')
+window.onkeypress(paddle_b_down, 'Down')
+window.onkeypress(quit_game, 'q')
 window.listen()
 # window.mainloop()
 
